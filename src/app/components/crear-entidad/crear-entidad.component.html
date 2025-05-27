@@ -1,0 +1,17 @@
+<h2>Crear Entidad</h2>
+
+<form [formGroup]="entidadForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="nit">NIT:</label>
+    <input id="nit" type="text" formControlName="nit" />
+  </div>
+
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input id="nombre" type="text" formControlName="nombre" />
+  </div>
+
+  <button type="submit" [disabled]="entidadForm.invalid">Guardar</button>
+</form>
+
+<p *ngIf="mensaje">{{ mensaje }}</p>

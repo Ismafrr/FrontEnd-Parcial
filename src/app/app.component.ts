@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  template: `
+    <nav>
+      <a routerLink="/crear">Crear Entidad</a>
+      <a routerLink="/listar">Listar Entidades</a>
+    </nav>
+    <router-outlet></router-outlet>
+  `,
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'frontend-entidades';

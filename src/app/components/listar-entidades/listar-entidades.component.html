@@ -1,0 +1,20 @@
+<h2>Listado de Entidades</h2>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>NIT</th>
+      <th>Nombre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let entidad of entidades">
+      <td>{{ entidad.id }}</td>
+      <td>{{ entidad.nit }}</td>
+      <td>{{ entidad.nombre }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<p *ngIf="entidades.length === 0">No hay entidades registradas.</p>
